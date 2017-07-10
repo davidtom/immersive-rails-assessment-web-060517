@@ -1,0 +1,12 @@
+<h1>New Appearance</h1>
+
+<%= form_for @appearance do |f| %>
+<h3>Select a Guest</h3>
+<%= f.collection_radio_buttons  :guest_id, @guests, :id, :name%>
+<h3>Select an Episode </h3>
+<%= f.collection_radio_buttons  :episode_id, @episodes, :id, :date%>
+<h3>Enter a Rating (1-5)</h3>
+<%= f.text_field :rating%>
+<br><br>
+<%= f.submit %>
+<% end %>

@@ -1,0 +1,17 @@
+<h1><%= @guest.name %></h1>
+<b><label>Occupation: </label></b><%= @guest.occupation %>
+
+<h3>Episodes</h3>
+<% @guest.episodes.each do |episode| %>
+  <%= link_to episode.date, episode_path(episode) %>
+  <br>
+<% end %>
+
+
+<!-- Later: Create the button below; needs to go to a custom route: guest/id/new_appearance -->
+
+<!-- <br>
+<br>
+<%= form_tag new_appearance_path, method: "get" do %>
+<%= submit_tag "Add New Appearance"%>
+<% end %> -->
